@@ -1,0 +1,57 @@
+{
+  "name": "node-ravenfall",
+  "version": "1.0.0",
+  "description": "A NodeJS implementation of RavenFall APIs",
+  "main": "ravenfall.js",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "request": "^2.88.0",
+    "sinon": "^7.4.2",
+    "twitch-bot": "^1.3.5"
+  },
+  "devDependencies": {
+    "nyc": "^14.1.1",
+    "eslint": "^6.4.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "eslintConfig": {
+    "extends": ["eslint:recommended", "google"],
+    "env": {
+        "node" : true,
+        "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "rules" : {
+      "max-len": [2, 120, 4, {"ignoreUrls": true}],
+      "no-console": 0,
+      "require-jsdoc": 1
+    }
+  },
+  "eslintIgnore": [
+    "node_modules"
+  ],
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text-summary mocha ./ravenfall.test.js ",
+    "lint": "eslint ravenfall.js",
+    "pretest": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omnoms/node-ravenfall.git"
+  },
+  "keywords": [
+    "nodejs",
+    "ravenfall",
+    "api",
+    "wrapper"
+  ],
+  "author": "Marko Vainiokangas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omnoms/node-ravenfall/issues"
+  },
+  "homepage": "https://github.com/omnoms/node-ravenfall#readme"
+}

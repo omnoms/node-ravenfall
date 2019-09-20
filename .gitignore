@@ -1,0 +1,7 @@
+node_modules
+coverage
+.nyc_output
+bot.js
+cmd.json
+package-lock.json
+cred.js
